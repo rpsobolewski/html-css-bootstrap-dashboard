@@ -35,16 +35,21 @@
                             placeholder="Prova a cercare: Lezioni di Larvel"
                             aria-label="Username"
                             aria-describedby="basic-addon1">
-                            <div class="btn-group dropstart">
+                            <div class="pt-2 d-none d-lg-inline">
+                            <a href="#"><i class="fa-solid text-secondary fa-list-ul px-2 "></i></a>
+                            <a href="#"><i class="fa-solid text-secondary fa-circle-question px-2"></i></a>
+                            <a href="#"><i class="fa-solid text-secondary fa-ellipsis-vertical px-2"></i></a>
+                            </div>
+                            <div class="btn-group">
                                 <button type="button" class="btn border-0" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fa-solid fa-bell text-warning"></i>
+                                  <i class="fa-solid fa-bell text-warning"></i>
                                 </button>
-                                <ul class="dropdown-menu ">
-                                  <li><a class="dropdown-item" href="#">Menu item</a></li>
-                                  <li><a class="dropdown-item" href="#">Menu item</a></li>
-                                  <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                <ul class="dropdown-menu dropdown-menu-end mt-2" >
+                                  <li><button class="dropdown-item" type="button">Action</button></li>
+                                  <li><button class="dropdown-item" type="button">Another action</button></li>
+                                  <li><button class="dropdown-item" type="button">Something else here</button></li>
                                 </ul>
-                              </div>
+                            </div>
                     </div>
                 </form>
             </nav>
