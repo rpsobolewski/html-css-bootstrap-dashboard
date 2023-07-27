@@ -1,0 +1,6 @@
+.full{
+    height: calc(100vh - 56px);
+    background-image: url(../img/sidebar-bg.png);
+    margin: 0;
+    background-color: #041a2c;
+}

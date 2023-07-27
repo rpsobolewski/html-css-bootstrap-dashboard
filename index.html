@@ -17,12 +17,12 @@
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     </head>
-    <body>
-        <header class="fixed-top">
+    <body class>
+        <header class="fixed-top position-relative">
             <nav class="navbar bg-body-tertiary">
                 <form class="container-fluid">
                     <div class="input-group">
-                        <img class="d-lg-none" height="40px"
+                        <img class="d-lg-none me-4" height="40px"
                             src="./img/mobile-logo.png" alt>
                         <img class="d-none d-lg-inline pe-3" height="40px"
                             src="./img/logo.svg" alt>
@@ -35,28 +35,59 @@
                             placeholder="Prova a cercare: Lezioni di Larvel"
                             aria-label="Username"
                             aria-describedby="basic-addon1">
-                            <div class="pt-2 d-none d-lg-inline">
-                            <a href="#"><i class="fa-solid text-secondary fa-list-ul px-2 "></i></a>
-                            <a href="#"><i class="fa-solid text-secondary fa-circle-question px-2"></i></a>
-                            <a href="#"><i class="fa-solid text-secondary fa-ellipsis-vertical px-2"></i></a>
-                            </div>
-                            <div class="btn-group">
-                                <button type="button" class="btn border-0" data-bs-toggle="dropdown" aria-expanded="false">
-                                  <i class="fa-solid fa-bell text-warning"></i>
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-end mt-2" >
-                                  <li><button class="dropdown-item" type="button">Action</button></li>
-                                  <li><button class="dropdown-item" type="button">Another action</button></li>
-                                  <li><button class="dropdown-item" type="button">Something else here</button></li>
-                                </ul>
-                            </div>
+                        <div class="pt-2 d-none d-lg-inline">
+                            <a href="#"><i
+                                    class="fa-solid text-secondary fa-list-ul px-2 "></i></a>
+                            <a href="#"><i
+                                    class="fa-solid text-secondary fa-circle-question px-2"></i></a>
+                            <a href="#"><i
+                                    class="fa-solid text-secondary fa-ellipsis-vertical px-2"></i></a>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn border-0"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-bell text-warning"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end mt-2">
+                                <li><button class="dropdown-item" type="button">Action</button></li>
+                                <li><button class="dropdown-item" type="button">Another
+                                        action</button></li>
+                                <li><button class="dropdown-item" type="button">Something
+                                        else here</button></li>
+                            </ul>
+                        </div>
                     </div>
                 </form>
             </nav>
         </header>
 
-        <nav>
-
+        <nav  class="position-absolute start-0 ">
+            <div class="row flex-column text-white position-relative full justify-content-between">
+                <div class="col-12">
+                    <div>
+                        <i class="fa-solid fa-house p-4"></i>
+                        <a class="btn text-white d-none d-lg-inline pe-5"
+                            href="#">Home</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-chart-simple p-4"></i>
+                        <a class="btn text-white d-none d-lg-inline pe-5"
+                            href="#">Stats</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-signal p-4"></i>
+                        <a class="btn text-white d-none d-lg-inline pe-5"
+                            href="#">Signals</a>
+                    </div>
+                </div>
+                <div class="col-12 ">
+                    <div>
+                        <i class="fa-solid fa-gear p-4 "></i>
+                        <a class="btn text-white d-none d-lg-inline pe-5"
+                            href="#">Admin</a>
+                    </div>
+                </div>
+            </div>
         </nav>
 
         <main>
