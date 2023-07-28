@@ -1,251 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dashboard</title>
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-            crossorigin="anonymous">
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    </head>
-    <body class>
-        <header class="fixed-top position-relative">
-            <nav class="navbar bg-body-tertiary ">
-                <form class="container-fluid">
-                    <div class="input-group">
-                        <img class="d-lg-none me-4" height="40px"
-                            src="./img/mobile-logo.png" alt>
-                        <img class="d-none d-lg-inline pe-3" height="40px"
-                            src="./img/logo.svg" alt>
-                        <span
-                            class="input-group-text rounded-start border-end-0 bg-secondary-subtle"
-                            id="basic-addon1"><i
-                                class="fa-solid fa-magnifying-glass"></i></span>
-                        <input type="text"
-                            class="form-control border-start-0 rounded-end bg-secondary-subtle"
-                            placeholder="Prova a cercare: Lezioni di Larvel"
-                            aria-label="Username"
-                            aria-describedby="basic-addon1">
-                        <div class="pt-2 d-none d-lg-inline">
-                            <a href="#"><i
-                                    class="fa-solid text-secondary fa-list-ul px-2 "></i></a>
-                            <a href="#"><i
-                                    class="fa-solid text-secondary fa-circle-question px-2"></i></a>
-                            <a href="#"><i
-                                    class="fa-solid text-secondary fa-ellipsis-vertical px-2"></i></a>
-                        </div>
-                        <div class="btn-group">
-                            <button type="button" class="btn border-0"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fa-solid fa-bell text-warning"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end mt-2">
-                                <li><button class="dropdown-item" type="button">Action</button></li>
-                                <li><button class="dropdown-item" type="button">Another
-                                        action</button></li>
-                                <li><button class="dropdown-item" type="button">Something
-                                        else here</button></li>
-                            </ul>
-                        </div>
-                    </div>
-                </form>
-            </nav>
-        </header>
-
-        <nav class="position-absolute start-0 ">
-            <div
-                class="row flex-column text-white position-relative full justify-content-between">
-                <div class="col-12">
-                    <div>
-                        <i class="fa-solid fa-house p-4"></i>
-                        <a class="btn text-white d-none d-lg-inline pe-5"
-                            href="#">Home</a>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-chart-simple p-4"></i>
-                        <a class="btn text-white d-none d-lg-inline pe-5"
-                            href="#">Stats</a>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-signal p-4"></i>
-                        <a class="btn text-white d-none d-lg-inline pe-5"
-                            href="#">Signals</a>
-                    </div>
-                </div>
-                <div class="col-12 ">
-                    <div>
-                        <i class="fa-solid fa-gear p-4 "></i>
-                        <a class="btn text-white d-none d-lg-inline pe-5"
-                            href="#">Admin</a>
-                    </div>
-                </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body class>
+    <header class="fixed-top position-relative">
+      <nav class="navbar bg-body-tertiary ">
+        <form class="container-fluid">
+          <div class="input-group">
+            <img class="d-lg-none me-4" height="40px"
+              src="./img/mobile-logo.png" alt>
+            <img class="d-none d-lg-inline pe-3" height="40px"
+              src="./img/logo.svg" alt>
+            <span
+              class="input-group-text rounded-start border-end-0 bg-secondary-subtle"
+              id="basic-addon1"><i
+                class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="text"
+              class="form-control border-start-0 rounded-end bg-secondary-subtle"
+              placeholder="Prova a cercare: Lezioni di Larvel"
+              aria-label="Username"
+              aria-describedby="basic-addon1">
+            <div class="pt-2 d-none d-lg-inline">
+              <a href="#"><i
+                  class="fa-solid text-secondary fa-list-ul px-2 "></i></a>
+              <a href="#"><i
+                  class="fa-solid text-secondary fa-circle-question px-2"></i></a>
+              <a href="#"><i
+                  class="fa-solid text-secondary fa-ellipsis-vertical px-2"></i></a>
             </div>
-        </nav>
-        <main class="width_full ">
-            <div class="banner text-white ">
-                <div class="row bg-primary ps-2 pb-2 pt-3 justify-content-between ">
-                    <div class="col-12 col-lg-5 order-2 order-lg-1 m-4 m-lg-0">
-                        <div>
-                            <span class=" pt-3 fw-semibold fs-2">Boolean</span><span
-                                class="badge rounded-pill ms-2 pill_color fw-normal">Piano
-                                Blaze</span>
-                        </div>
-                        <div>
-                            <span
-                                class="badge rounded-pill mb-3 pill_color fw-normal">3
-                                app</span> <i
-                                class="fa-solid fa-angles-right fa-xs"></i>
-                            <span
-                                class="badge rounded-pill mb-3 pill_color fw-normal d-none d-lg-inline">Boolean
-                                mobile app</span>
-                            <span
-                                class="badge rounded-pill mb-3 pill_color fw-normal d-none d-lg-inline">Boolean
-                                web app</span>
-                            <span
-                                class="badge rounded-pill mb-3 pill_color fw-normal d-none d-lg-inline">Boolean
-                                blog app</span>
-                            <span
-                                class="badge rounded-pill mb-3 pill_color fw-normal d-lg-none"><i
-                                    class="fa-solid fa-plus"></i></span>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4 order-3 order-lg-2 m-4 m-lg-0">
-                        <div>Studenti online negli ultimi 30 minuti</div>
-                        <div class="fs-1">125</div>
-                    </div>
-                    <div class="col-12 col-lg-3 order-1 order-lg-3 m-4 m-lg-0 ">
-                        <span >Nuovo studente</span>
-                        <button class="btn btn-primary border-white " type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
-                            <i
-                                    class="fa-solid fa-plus"></i>
-                          </button>
-                          <!--offcanvas-->
-                          <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
-                            <div class="offcanvas-header">
-                              <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                            </div>
-                            <div class="offcanvas-body">
-                              <div>
-                                <form class="row g-3">
-                                    <div class="col-6">
-                                      <label  class="form-label">Nome</label>
-                                      <input  class="form-control" >
-                                    </div>
-                                    <div class="col-6">
-                                      <label class="form-label">Cognome</label>
-                                      <input class="form-control" >
-                                    </div>
-                                    <div class="col-6">
-                                      <label class="form-label">Email</label>
-                                      <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon1">@</span>
-                                        <input type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1">
-                                      </div>
-                                    </div>
-                                    <div class="col-6">
-                                      <label class="form-label">Password</label>
-                                      <input type="password" class="form-control" >
-                                    </div>
-                                    <div class="col-6">
-                                      <label class="form-label">Email</label>
-                                      <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon1">@</span>
-                                        <input type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1">
-                                      </div>
-                                    </div>
-                                    <div class="col-6">
-                                      <label class="form-label">Password</label>
-                                      <input type="password" class="form-control" >
-                                    </div>
-                                    <div class="col-12">
-                                      <label class="form-label">Address </label>
-                                      <input class="form-control" >
-                                    </div>
-                                    <div class="col-6">
-                                      <label class="form-label">Città</label>
-                                      <input class="form-control" >
-                                    </div>
-                                    <div class="col-4">
-                                      <label for="inputState" class="form-label">Stato</label>
-                                      <select id="inputState" class="form-select">
-                                        <option selected="">Scegli...</option>
-                                        <option>...</option>
-                                      </select>
-                                    </div>
-                                    <div class="col-2">
-                                      <label class="form-label">CAP</label>
-                                      <input class="form-control" >
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="mb-3">
-                                            <label for="formFile" class="form-label">Foto</label>
-                                            <input class="form-control" type="file" id="formFile">
-                                          </div>
-                                      <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                                        <label class="form-check-label" for="gridCheck">
-                                          Seleziona per proseguire
-                                        </label>
-                                      </div>
-                                    </div>
-                                    <div class="col-12">
-                                      <button type="submit" class="btn btn-primary">Salva</button>
-                                      <button type="submit" class="btn btn-warning">Svuota</button>
-                                    </div>
-                                  </form>
-                              </div>
-                            </div>
-                          </div>
-
-                    </div>
-                </div>
+            <div class="btn-group">
+              <button type="button" class="btn border-0"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-bell text-warning"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end mt-2">
+                <li><button class="dropdown-item" type="button">Action</button></li>
+                <li><button class="dropdown-item" type="button">Another
+                    action</button></li>
+                <li><button class="dropdown-item" type="button">Something
+                    else here</button></li>
+              </ul>
             </div>
-            <div class="row col-12 col-lg-7  m-1 mt-3 pe-4">
-              <div class="card-body bg-secondary-subtle rounded-top">
-                <h5 class="card-title p-3 fw-semibold">Card title</h5>
+          </div>
+        </form>
+      </nav>
+    </header>
+
+    <nav class="position-absolute start-0 ">
+      <div
+        class="row flex-column text-white position-relative full justify-content-between">
+        <div class="col-12">
+          <div>
+            <i class="fa-solid fa-house p-4"></i>
+            <a class="btn text-white d-none d-lg-inline pe-5"
+              href="#">Home</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-chart-simple p-4"></i>
+            <a class="btn text-white d-none d-lg-inline pe-5"
+              href="#">Stats</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-signal p-4"></i>
+            <a class="btn text-white d-none d-lg-inline pe-5"
+              href="#">Signals</a>
+          </div>
+        </div>
+        <div class="col-12 ">
+          <div>
+            <i class="fa-solid fa-gear p-4 "></i>
+            <a class="btn text-white d-none d-lg-inline pe-5"
+              href="#">Admin</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="width_full ">
+      <div class="banner text-white ">
+        <div class="row bg-primary ps-2 pb-2 pt-3 justify-content-between ">
+          <div class="col-12 col-lg-5 order-2 order-lg-1 m-4 m-lg-0">
+            <div>
+              <span class=" pt-3 fw-semibold fs-2">Boolean</span><span
+                class="badge rounded-pill ms-2 pill_color fw-normal">Piano
+                Blaze</span>
+            </div>
+            <div>
+              <span
+                class="badge rounded-pill mb-3 pill_color fw-normal">3
+                app</span> <i
+                class="fa-solid fa-angles-right fa-xs"></i>
+              <span
+                class="badge rounded-pill mb-3 pill_color fw-normal d-none d-lg-inline">Boolean
+                mobile app</span>
+              <span
+                class="badge rounded-pill mb-3 pill_color fw-normal d-none d-lg-inline">Boolean
+                web app</span>
+              <span
+                class="badge rounded-pill mb-3 pill_color fw-normal d-none d-lg-inline">Boolean
+                blog app</span>
+              <span
+                class="badge rounded-pill mb-3 pill_color fw-normal d-lg-none"><i
+                  class="fa-solid fa-plus"></i></span>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 order-3 order-lg-2 m-4 m-lg-0">
+            <div>Studenti online negli ultimi 30 minuti</div>
+            <div class="fs-1">125</div>
+          </div>
+          <div class="col-12 col-lg-3 order-1 order-lg-3 m-4 m-lg-0 ">
+            <span>Nuovo studente</span>
+            <button class="btn btn-primary border-white " type="button">
+              <i
+                class="fa-solid fa-plus"></i>
+            </button>
+            <!--offcanvas-->
+            <div class="offcanvas offcanvas-end" data-bs-backdrop="static"
+              tabindex="-1" id="staticBackdrop"
+              aria-labelledby="staticBackdropLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5>
+                <button type="button" class="btn-close"
+                  data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
-              <div class="card-body border-top border rounded-bottom-3 p-2">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">Nome</th>
-                      <th scope="col"></th>
-                      <th scope="col"></th>
-                      <th scope="col"></th>
-                      <th scope="col">Data Inizio</th>
-                      <th scope="col">ROI</th>
-                      <th scope="col">Stato</th>
-                      <th scope="col">Azioni</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row"><img height="20px" src="./img/class-avatar.jpg" alt=""> Classe 75</th>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td>15 Feb 2021</td>
-                      <td>20%</td>
-                      <td>Otto</td>
-                      <td><div class="btn">p</div><div class="btn">b</div></td>
-                    </tr>
-                   
-                  </tbody>
-                </table>
+              <div class="offcanvas-body">
+                <div>
+                  <form class="row g-3">
+                    <div class="col-6">
+                      <label class="form-label">Nome</label>
+                      <input class="form-control">
+                    </div>
+                    <div class="col-6">
+                      <label class="form-label">Cognome</label>
+                      <input class="form-control">
+                    </div>
+                    <div class="col-6">
+                      <label class="form-label">Email</label>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <input type="text" class="form-control"
+                          aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <label class="form-label">Password</label>
+                      <input type="password" class="form-control">
+                    </div>
+                    <div class="col-6">
+                      <label class="form-label">Email</label>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <input type="text" class="form-control"
+                          aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <label class="form-label">Password</label>
+                      <input type="password" class="form-control">
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label">Address </label>
+                      <input class="form-control">
+                    </div>
+                    <div class="col-6">
+                      <label class="form-label">Città</label>
+                      <input class="form-control">
+                    </div>
+                    <div class="col-4">
+                      <label for="inputState" class="form-label">Stato</label>
+                      <select id="inputState" class="form-select">
+                        <option selected>Scegli...</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                    <div class="col-2">
+                      <label class="form-label">CAP</label>
+                      <input class="form-control">
+                    </div>
+                    <div class="col-12">
+                      <div class="mb-3">
+                        <label for="formFile" class="form-label">Foto</label>
+                        <input class="form-control" type="file" id="formFile">
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox"
+                          id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                          Seleziona per proseguire
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary">Salva</button>
+                      <button type="submit" class="btn btn-warning">Svuota</button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
-            </div>
-        </main>
 
-    </body>
+          </div>
+        </div>
+      </div>
+      <div class="row col-12 col-lg-7  m-1 mt-3 pe-4">
+        <div class="card-body bg-secondary-subtle rounded-top">
+          <h5 class="card-title p-3 fw-semibold">Card title</h5>
+        </div>
+        <div class="card-body border-top border rounded-bottom-3 p-2">
+          <table class="table">
+            <thead>
+              <tr class="text-center">
+                <th scope="col">Nome</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th class="d-none d-md-table-cell" scope="col">Data Inizio</th>
+                <th class="d-none d-lg-table-cell" scope="col">ROI</th>
+                <th scope="col">Stato</th>
+                <th scope="col ">Azioni</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><img height="20px" src="./img/class-avatar.jpg"
+                    alt> Classe 75</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="d-none d-md-table-cell">15 Feb 2021</td>
+                <td class="d-none d-lg-table-cell">20%</td>
+                <td><span class="badge rounded-pill text-bg-success">Done</span></td>
+                <td><div class="btn p-0 ps-3"><button
+                      class="btn btn-white border-secondary " type="button">
+                      <i class="fa-solid fa-pencil "></i>
+                    </button></div><div class="btn p-0 ">
+                    <button class="btn  btn-white border-secondary "
+                      type="button">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button></div></td>
+              </tr>
+              <tr>
+                <th scope="row"><img height="20px" src="./img/class-avatar.jpg"
+                    alt> Classe 76</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="d-none d-md-table-cell">16 Feb 2021</td>
+                <td class="d-none d-lg-table-cell">20%</td>
+                <td><span class="badge rounded-pill text-bg-success">Done</span></td>
+                <td><div class="btn p-0 ps-3"><button
+                      class="btn btn-white border-secondary " type="button">
+                      <i class="fa-solid fa-pencil "></i>
+                    </button></div><div class="btn p-0 ">
+                    <button class="btn  btn-white border-secondary "
+                      type="button">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button></div></td>
+              </tr>
+              <tr>
+                <th scope="row"><img height="20px" src="./img/class-avatar.jpg"
+                    alt> Classe 77</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="d-none d-md-table-cell">17 Feb 2021</td>
+                <td class="d-none d-lg-table-cell">20%</td>
+                <td><span class="badge rounded-pill text-bg-warning text-white">process</span></td>
+                <td><div class="btn p-0 ps-3"><button
+                      class="btn btn-white border-secondary " type="button">
+                      <i class="fa-solid fa-pencil "></i>
+                    </button></div><div class="btn p-0 ">
+                    <button class="btn  btn-white border-secondary "
+                      type="button">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button></div></td>
+              </tr>
+              <tr>
+                <th scope="row"><img height="20px" src="./img/class-avatar.jpg"
+                    alt> Classe 78</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="d-none d-md-table-cell">18 Feb 2021</td>
+                <td class="d-none d-lg-table-cell">20%</td>
+                <td><span class="badge rounded-pill text-bg-success">Done</span></td>
+                <td><div class="btn p-0 ps-3"><button
+                      class="btn btn-white border-secondary " type="button">
+                      <i class="fa-solid fa-pencil "></i>
+                    </button></div><div class="btn p-0 ">
+                    <button class="btn  btn-white border-secondary "
+                      type="button">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button></div></td>
+              </tr>
+              <tr>
+                <th scope="row"><img height="20px" src="./img/class-avatar.jpg"
+                    alt> Classe 79</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="d-none d-md-table-cell">19 Feb 2021</td>
+                <td class="d-none d-lg-table-cell">20%</td>
+                <td><span class="badge rounded-pill text-bg-danger">failed</span></td>
+                <td><div class="btn p-0 ps-3"><button
+                      class="btn btn-white border-secondary " type="button">
+                      <i class="fa-solid fa-pencil "></i>
+                    </button></div><div class="btn p-0 ">
+                    <button class="btn  btn-white border-secondary "
+                      type="button">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button></div></td>
+              </tr>
+              <tr>
+                <th scope="row"><img height="20px" src="./img/class-avatar.jpg"
+                    alt> Classe 80</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="d-none d-md-table-cell">20 Feb 2021</td>
+                <td class="d-none d-lg-table-cell">20%</td>
+                <td><span class="badge rounded-pill text-bg-success">Done</span></td>
+                <td><div class="btn p-0 ps-3"><button
+                      class="btn btn-white border-secondary " type="button">
+                      <i class="fa-solid fa-pencil "></i>
+                    </button></div><div class="btn p-0 ">
+                    <button class="btn  btn-white border-secondary "
+                      type="button">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button></div></td>
+              </tr>
+              <tr>
+                <th scope="row"><img height="20px" src="./img/class-avatar.jpg"
+                    alt> Classe 81</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="d-none d-md-table-cell">21 Feb 2021</td>
+                <td class="d-none d-lg-table-cell">20%</td>
+                <td><span class="badge rounded-pill text-bg-success">Done</span></td>
+                <td><div class="btn p-0 ps-3"><button
+                      class="btn btn-white border-secondary " type="button">
+                      <i class="fa-solid fa-pencil "></i>
+                    </button></div><div class="btn p-0 ">
+                    <button class="btn  btn-white border-secondary "
+                      type="button">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button></div></td>
+              </tr>
+              <tr>
+                <th scope="row"><img height="20px" src="./img/class-avatar.jpg"
+                    alt> Classe 82</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="d-none d-md-table-cell">22 Feb 2021</td>
+                <td class="d-none d-lg-table-cell">20%</td>
+                <td><span class="badge rounded-pill text-bg-success">Done</span></td>
+                <td><div class="btn p-0 ps-3"><button
+                      class="btn btn-white border-secondary " type="button">
+                      <i class="fa-solid fa-pencil "></i>
+                    </button></div><div class="btn p-0 ">
+                    <button class="btn  btn-white border-secondary "
+                      type="button">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button></div></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </body>
 </html>
