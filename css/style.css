@@ -18,6 +18,12 @@
 background-color: #165BBA;
 }
 
+/*hover*/
+
+.nav_icon:hover{
+    background-color: rgba(255, 255, 255, 0.322);
+}
+/*hover*/
 
 
 @media screen and (min-width:992px){
@@ -26,4 +32,7 @@ background-color: #165BBA;
         margin-left: 220px;
     }
 }
+ 
+
+
 
