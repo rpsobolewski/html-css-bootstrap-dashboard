@@ -2,18 +2,23 @@
     height: calc(100vh - 56px);
     background-image: url(../img/sidebar-bg.png);
     margin: 0;
+    
     background-color: #041a2c;
+    position: fixed;
 }
 
 .width_full{
     width: calc(100vw - 104px );
     margin-left: 104px;
+    margin-top: 56px;
 }
 
 .pill_color{
 
 background-color: #165BBA;
 }
+
+
 
 @media screen and (min-width:992px){
     .width_full{
